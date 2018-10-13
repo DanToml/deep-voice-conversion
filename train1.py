@@ -45,7 +45,7 @@ def train(args, logdir):
         ],
         max_epoch=hp.train1.num_epochs,
         steps_per_epoch=hp.train1.steps_per_epoch,
-        # session_config=session_conf
+        session_config=session_conf
     )
     ckpt = '{}/{}'.format(logdir, args.ckpt) if args.ckpt else tf.train.latest_checkpoint(logdir)
     if ckpt:
